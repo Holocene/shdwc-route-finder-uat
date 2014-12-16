@@ -13,8 +13,16 @@
                     <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
                        ng-click="sort('name')"></a>
                 </th>
-                <th>Corporation</th>
-                <th>Alliance</th>
+                <th>
+                    Corporation
+                    <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
+                       ng-click="sort('corporation')"></a>
+                </th>
+                <th>
+                    Alliance
+                    <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
+                       ng-click="sort('alliance')"></a>
+                </th>
                 <th>
                     Total Wormholes Added
                     <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
@@ -31,12 +39,12 @@
         <tr ng-repeat="user in items" class="vertical-middle">
             <td><img src="{{user.picUrl}}" style="width:32px; height:32px;"/> </td>
             <td>
-                <a href="" ng-click="select(user);">
+                <a href="" ui-sref="user-details({user: user.name})">
                     {{user.name}}
                 </a>
             </td>
-            <td></td>
-            <td></td>
+            <td>{{user.corporation}}</td>
+            <td>{{user.alliance}}</td>
             <td>
                 <span ng-if="user.leaderboardTotals.wormholesAdded">
                     {{user.leaderboardTotals.wormholesAdded}}

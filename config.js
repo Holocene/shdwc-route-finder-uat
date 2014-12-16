@@ -1,6 +1,6 @@
 ﻿var siteConfig = {
     firebaseUrl: 'https://wormhole-mapper-uat.firebaseio.com/',
-    serverLoginUrl: 'https://fathomless-thicket-9889.herokuapp.com/login',
+    serverLoginUrl: 'https://shwc-login-uat.azurewebsites.net/login',
     ssoHost: 'https://sisilogin.testeveonline.com',
 
     maintenanceServerUrl: 'http://shwc-maint-uat.azurewebsites.net/',
