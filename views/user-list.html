@@ -33,6 +33,11 @@
                     <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
                        ng-click="sort('lastModified')"></a>
                 </th>
+                <th>
+                    Last Login
+                    <a href="" class="glyphicon glyphicon-sort glyphicon-btn"
+                       ng-click="sort('lastLogin')"></a>
+                </th>
             </tr>
         </thead>
 
@@ -54,8 +59,13 @@
                 <a class="abbr" ng-if="user.lastModified"
                    data-tooltip="{{user.lastModifiedPretty}}"
                    data-tooltip-placement="right">{{user.lastModifiedFuzzy}}</a>
-                <span></span>
             </td>
+            <td>
+                <a class="abbr" ng-if="user.lastLogin"
+                   data-tooltip="{{user.lastLoginPretty}}"
+                   data-tooltip-placement="right">{{user.lastLoginFuzzy}}</a>
+            </td>
+            
         </tr>
     </table>
 </div>
